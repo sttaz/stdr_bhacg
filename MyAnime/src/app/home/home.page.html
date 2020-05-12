@@ -1,19 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      MyAnime
+      MyAnime Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">My Anime</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="NickName" [(ngModel)]="nick_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-button expand="full" class="no-padding" color="success" (click)="tryLogin()">Login</ion-button>
+  </ion-list>
+  <ion-button expand="full" class="no-padding" (click)="redrtRegister()">Create a new account</ion-button>
   <!-- <ion-button href="/register">Registrar</ion-button> -->
-  <ion-button (click)="go()">Ir a registrar</ion-button>
 </ion-content>

@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-	<div>Hola mundo desde registrar!</div>
+  <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="NickName" [(ngModel)]="nick_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" minlength="7" maxlength="15" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Confirm Password" minlength="7" maxlength="15" [(ngModel)]="confirm_password"></ion-input>
+      </ion-item>
+      <ion-button expand="full" class="no-padding" color="success" (click)="tryRegister()" [disabled]="disabledButton">Save</ion-button>
+  </ion-list>
+  <ion-button expand="full" class="no-padding" (click)="redrtHome()">Cancel</ion-button>
 </ion-content>
